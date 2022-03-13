@@ -19,7 +19,7 @@ void end(){
 
 void reset(){
 	int ulang;
- 	printf("\nIngin Mengulangi? [y / t] ");
+ 	printf("\n\nIngin Mengulangi? [y / t] ");
  	ulang = getch();
  	
  	if (ulang == 'y' || ulang == 'Y'){
@@ -36,6 +36,28 @@ void reset(){
  		printf("Input yang anda masukkan tidak valid\n");
  		reset();
  	}
+}
+
+int validInt(int *var){
+	char buff[1024];
+	char cek;
+	fflush(stdin);
+	if(fgets(buff, sizeof(buff), stdin) != NULL){
+		if(sscanf(buff, "%d %c", var, &cek) == 1) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+void cek_valid(int *var, char *msg){
+	while(1){
+		printf(msg);
+		if(validInt(var))
+			break;
+		printf("\t||[ERROR] Input hanya berupa angka!!");
+		printf("\n");
+	}
 }
 
 void zodiac(int tanggal, int bulan){
@@ -125,11 +147,11 @@ int main(){
    int bln_lahir;
    
    judul();
-   
+	
    printf("\nInputkan tanggal lahir berupa angka (1-31) !!!\n");
-   printf("\nTanggal Lahir : "); 
-   scanf("%d",&tgl_lahir);
    
+   cek_valid(&tgl_lahir, "\nTanggal Lahir :");
+   fflush(stdin);
    system("cls");
    
    judul();
@@ -149,10 +171,17 @@ int main(){
    printf("11 = November\n");
    printf("12 = Desember\n");
    
-   printf("\nBulan Lahir : ");
-   scanf("%d",&bln_lahir);
+   cek_valid(&bln_lahir, "\nBulan Lahir :");
+   fflush (stdin);
    
-   zodiac(tgl_lahir,bln_lahir);
+   if(tgl_lahir>=1 && tgl_lahir<=31|| bln_lahir>=1 && bln_lahir<=31){
+   	zodiac(tgl_lahir, bln_lahir);
+   	
+   }else{
+   	printf("Data yang anda masukkan tidak valid!!!");
+   	reset();
+   }
+  
    
    reset();
    
