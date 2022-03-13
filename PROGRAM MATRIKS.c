@@ -133,7 +133,7 @@ void Perkalian_Matriks(){
 	cek_valid(&m,"\t||Input Jumlah Baris Matriks [1] : ");
 	cek_valid(&n,"\t||Input Jumlah Kolom Matriks [1] : ");
 	cek_valid(&p,"\t||Input Jumlah Baris Matriks [2] : ");
-	cek_valid(&q,"\t||Input Jumlah Baris Matriks [2] : ");
+	cek_valid(&q,"\t||Input Jumlah Kolom Matriks [2] : ");
 	fflush(stdin);
 
 	if(n != p){
