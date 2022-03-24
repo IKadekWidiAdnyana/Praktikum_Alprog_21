@@ -145,14 +145,27 @@ int main(){
 
    int tgl_lahir;
    int bln_lahir;
+   int ulangi1, ulangi2;
    
    judul();
 	
    printf("\nInputkan tanggal lahir berupa angka (1-31) !!!\n");
    
-   cek_valid(&tgl_lahir, "\nTanggal Lahir :");
-   fflush(stdin);
-   system("cls");
+   do{
+	cek_valid(&tgl_lahir, "\nTanggal Lahir :");
+   	fflush(stdin);
+ 
+ 	if ((tgl_lahir > 31 || (tgl_lahir < 0))){
+	 	printf("\nTanggal Lahir Invalid\n");
+ 		printf("Mohon Input Angka 1-31!!!\n");
+ 		ulangi2 = 1;
+ 	}else{
+ 		ulangi2 = 0;
+ 	}
+ 		
+   }while (ulangi2 == 1);
+ 	system("cls");
+  
    
    judul();
    
@@ -174,11 +187,11 @@ int main(){
    cek_valid(&bln_lahir, "\nBulan Lahir :");
    fflush (stdin);
    
-   if(tgl_lahir>=1 && tgl_lahir<=31|| bln_lahir>=1 && bln_lahir<=31){
+   if(tgl_lahir>=1 && tgl_lahir<=31|| bln_lahir>=1 && bln_lahir<=12){
    	zodiac(tgl_lahir, bln_lahir);
    	
    }else{
-   	printf("Data yang anda masukkan tidak valid!!!");
+   	printf("Input yang anda masukkan tidak valid");
    	reset();
    }
   
