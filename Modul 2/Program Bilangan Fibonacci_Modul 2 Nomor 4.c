@@ -19,7 +19,7 @@ void validasi(int *var, char *msg){
 	while(1){
 		printf(msg);
 		if(validinteger(var))
-			break;
+		break;
 		system("cls");
 		printf("\n\t\t||[INPUT SALAH] INPUT HANYA BERUPA ANGKA!!");
 		printf("\n");
@@ -27,8 +27,8 @@ void validasi(int *var, char *msg){
 }
 
 void selesai (){
-	system("cls");
-	printf("\n\t\t========================\n");
+    system("cls");
+    printf("\n\t\t========================\n");
     printf("\n\t\t------TERIMA KASIH------\n");			
     printf("\n\t\t========================\n");
 }
@@ -54,12 +54,12 @@ int fungsi(int input) {
     	return 1;  
     } else { 
         return fungsi(input-1) + fungsi(input-2); //-1 yang berarti nilai sekarang menjadi satu nilai sebelumnya
-    }											  //-2 yang berarti nilai sekarang menjadi dua nilai sebelumnya
-}												  //lalu ditambah
+    }						  //-2 yang berarti nilai sekarang menjadi dua nilai sebelumnya
+}						  //lalu ditambah
 
 int main() {
-		system("cls");
-		printf("\n\t\t========================\n");
+	system("cls");
+	printf("\n\t\t========================\n");
     	printf("\n\t\t---BILANGAN FIBONACCI---\n");			 
     	printf("\n\t\t========================\n\n\n");		 
     	int j,total;
