@@ -1,8 +1,0 @@
-widi(4)	 : w=1 i=2 d=1 	 = [BUKAN PALINDRON]
-kasur(5)	 : k=1 a=1 s=1 u=1 r=1 	 = [BUKAN PALINDRON]
-widi(4)	 : w=1 i=2 d=1 	 = [BUKAN PALINDRON]
-widi adnyana(12)	 : w=1 i=2 d=2  =1 a=3 n=2 y=1 	 = [BUKAN PALINDRON]
-widi(4)	 : w=1 i=2 d=1 	 = [BUKAN PALINDRON]
-widi(4)	 : w=1 i=2 d=1 	 = [BUKAN PALINDRON]
-kasur(5)	 : k=1 a=1 s=1 u=1 r=1 	 = [BUKAN PALINDRON]
-kasurrusak(10)	 : k=2 a=2 s=2 u=2 r=2 	 = [PALINDRON]
