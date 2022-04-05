@@ -33,7 +33,7 @@ int valid_pilihan(){
 
     for(i=1;i<array; i++){
         if(angka[i]>=48 && angka[i]<=57){ 
-    }else{
+    	}else{
             salah += 1;
         }
     }
