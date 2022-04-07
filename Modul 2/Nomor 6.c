@@ -32,7 +32,7 @@ void pilihan_ulang (){
 	printf("\n\t\t\t                   INGIN MENGULANG?");
 	printf("\n\t\t\t                       1. IYA");
 	printf("\n\t\t\t                       0. TIDAK");
-    printf("\n\t\t\t               ::::::::::::::::::::::::");
+        printf("\n\t\t\t               ::::::::::::::::::::::::");
 	printf("\n\t\t\t                Masukkan Pilihan Anda : ");
 	ulang=validasi();
 	if (ulang == 1){
@@ -58,7 +58,7 @@ int main(){
 
 	system("cls");
 	header();
-    printf("\n\n\t\t\t      Masukkan Pokok Pinjaman        : ");
+        printf("\n\n\t\t\t      Masukkan Pokok Pinjaman        : ");
 	pokok_pinjaman=validasi();
 	
 	printf("\n\t\t\t      Masukkan Besar Bunga (PERSEN)  : ");
@@ -70,10 +70,10 @@ int main(){
 	system("cls");
 
 	header();
-    printf("\n\n\t\t\t                     DETAIL ANGSURAN \n");
-    printf("\n\t                    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+        printf("\n\n\t\t\t                     DETAIL ANGSURAN \n");
+        printf("\n\t                    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 	bunga = bunga/100;
-    angsuran_pokok = pokok_pinjaman/lama_pinjam;
+        angsuran_pokok = pokok_pinjaman/lama_pinjam;
 
 	
     printf("\n\n\tBULAN\t\tBUNGA\t\tANGSURAN POKOK\t\tANGSURAN PERBULAN\n");
