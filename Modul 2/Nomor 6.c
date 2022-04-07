@@ -32,7 +32,7 @@ void pilihan_ulang (){
 	printf("\n\t\t\t               INGIN MENGULANG PROGRAM?");
 	printf("\n\t\t\t                       1. IYA");
 	printf("\n\t\t\t                       0. TIDAK");
-    printf("\n\t\t\t               ::::::::::::::::::::::::");
+        printf("\n\t\t\t               ::::::::::::::::::::::::");
 	printf("\n\t\t\t                Masukkan Pilihan Anda : ");
 	ulang=validasi();
 	if (ulang == 1){
@@ -58,7 +58,7 @@ int main(){
 
 	system("cls");
 	judul();
-    printf("\n\n\t\t\t      Masukkan Pokok Pinjaman        : ");
+        printf("\n\n\t\t\t      Masukkan Pokok Pinjaman        : ");
 	pokok_pinjaman=validasi();
 	
 	printf("\n\t\t\t      Masukkan Besar Bunga (PERSEN)  : ");
@@ -70,25 +70,25 @@ int main(){
 	system("cls");
 
 	judul();
-    printf("\n\n\t\t\t                     DETAIL ANGSURAN \n");
-    printf("\n\t                    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+        printf("\n\n\t\t\t                     DETAIL ANGSURAN \n");
+        printf("\n\t                    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 	bunga = bunga/100;
-    angsuran_pokok = pokok_pinjaman/lama_pinjam;
+        angsuran_pokok = pokok_pinjaman/lama_pinjam;
 
 	
-    printf("\n\n\tBULAN\t\tBUNGA\t\tANGSURAN POKOK\t\tANGSURAN PERBULAN\n");
-    for(i = 1;i<=lama_pinjam;i++){
-        bunga_bulan = (pokok_pinjaman-((i-1)*angsuran_pokok))*(bunga/12);
-        total_bunga = total_bunga + bunga_bulan;
-        total_angsuran += (angsuran_pokok+bunga_bulan);
-        printf("\t %d\t\tRp. %.2f\tRp. %.2f\t\tRp. %.2f\n", i, bunga_bulan, angsuran_pokok, angsuran_pokok+bunga_bulan);
-    }
-    printf("\n\t ___________________________________________________________________________\n");
-    printf("\n\t\t\t      _______________________________________________\n");
-    printf("\n\t\t\t            Total Bunga   : Rp %.2f\n", total_bunga);
-    printf("\n\t\t\t            Total Angsuran: Rp %.2f\n", total_angsuran);
-    printf("\t\t\t      _______________________________________________\n");
-    pilihan_ulang();
+       printf("\n\n\tBULAN\t\tBUNGA\t\tANGSURAN POKOK\t\tANGSURAN PERBULAN\n");
+       for(i = 1;i<=lama_pinjam;i++){
+          bunga_bulan = (pokok_pinjaman-((i-1)*angsuran_pokok))*(bunga/12);
+          total_bunga = total_bunga + bunga_bulan;
+          total_angsuran += (angsuran_pokok+bunga_bulan);
+          printf("\t %d\t\tRp. %.2f\tRp. %.2f\t\tRp. %.2f\n", i, bunga_bulan, angsuran_pokok, angsuran_pokok+bunga_bulan);
+       }
+       printf("\n\t ___________________________________________________________________________\n");
+       printf("\n\t\t\t      _______________________________________________\n");
+       printf("\n\t\t\t            Total Bunga   : Rp %.2f\n", total_bunga);
+       printf("\n\t\t\t            Total Angsuran: Rp %.2f\n", total_angsuran);
+       printf("\t\t\t      _______________________________________________\n");
+       pilihan_ulang();
     
-	return 0;
+       return 0;
 }
