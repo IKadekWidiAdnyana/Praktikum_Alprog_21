@@ -114,7 +114,7 @@ void input_nilai(){
 		input_nilai();
 	}
 	else if (ulang == 2){
-		main();
+		keluar();
 	}
 	else{
 		printf ("\n\t||Kategori Menu Tidak Ada! Silahkan Input Ulang \n");
