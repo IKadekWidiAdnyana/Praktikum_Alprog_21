@@ -18,7 +18,7 @@ int main (){
 	int alphabet = 0;
 	system ("cls");
 	printf ("\t*********************************************************\n");
-	printf ("\t|           SELAMAT DATANG DI PROGRAM PALINDRON         |\n");
+	printf ("\t|           SELAMAT DATANG DI PROGRAM PALINDROM         |\n");
 	printf ("\t|         PRAKTIKUM ALGORITMA PEMROGRAMAN MODUL 4       |\n");
 	printf ("\t|                     KELOMPOK 21                       |\n");
 	printf ("\t*********************************************************\n");
@@ -113,12 +113,12 @@ void tampil(char kata[]){
 	FILE *file;
 	file = fopen("kamuskata.txt", "a");
 	if (palindrom(kata, strlen(kata)) == 1){
-		printf("\t = [PALINDRON]");
-		fprintf(file, "\t = [PALINDRON]\n");
+		printf("\t = [PALINDROM]");
+		fprintf(file, "\t = [PALINDROM]\n");
 	}
 	else {
-		printf("\t = [BUKAN PALINDRON]");
-		fprintf(file, "\t = [BUKAN PALINDRON]\n");
+		printf("\t = [BUKAN PALINDROM]");
+		fprintf(file, "\t = [BUKAN PALINDROM]\n");
 	}
 	fclose(file);
 	ulang();
