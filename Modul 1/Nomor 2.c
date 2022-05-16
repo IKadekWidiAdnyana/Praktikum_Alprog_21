@@ -1,7 +1,48 @@
 #include <stdio.h>
-
+#include <conio.h>
 #include <stdlib.h>
 
+int validasi(){
+  char ch; 
+  char *data; 
+  data= (char *) malloc (sizeof(char)); 
+  
+  int index=0;
+  
+  while ((ch=getch()) !=13) {
+    if (ch>='0' && ch<='9'){
+      printf("%c", ch); 
+      data[index]=ch; 
+      index++;
+    }
+  }
+  data [index]='\0';
+    
+  return atoi(data); 
+}
+float validasiBil(){
+  char ch; 
+  char *data; 
+  data= (char *) malloc (sizeof(char)); 
+  
+  int index=0;
+  
+  while ((ch=_getch()) !=13) {
+    if (ch>='0' && ch<='9'){
+      printf("%c", ch); 
+      data[index]=ch; 
+      index++;
+    }
+    else if (ch=='.'){
+      printf("%c", ch); 
+      data[index]=ch; 
+      index++;
+    }
+  }
+  data [index]='\0';
+    
+  return atof(data); 
+}
 
 
 int main()
@@ -16,7 +57,7 @@ int main()
 
     kembali:
 
-    printf ("\t*********************************************************\n");
+    	printf ("\t*********************************************************\n");
 	printf ("\t|               SELAMAT DATANG DI PROGRAM               |\n");
 	printf ("\t|              MENGHITUNG LUAS DAN KELILING             |\n");
 	printf ("\t|         PRAKTIKUM ALGORITMA PEMROGRAMAN MODUL 1       |\n");
@@ -37,7 +78,7 @@ int main()
 
         printf("Pilihan Anda [1-5]? ");
 
-        scanf("%d", &menu);
+        menu=validasi();
 
         printf("\n");
 
@@ -47,17 +88,17 @@ int main()
 
     case 1:
 
-        printf("Masukkan Panjang Sisi 1 : ");
-
-        scanf("%f", &a);
+        printf("\nMasukkan Panjang Sisi 1 : ");
+		
+        a=validasiBil();
         
-        printf("Masukkan Panjang Sisi 2 : ");
+        printf("\nMasukkan Panjang Sisi 2 : ");
         
-        scanf("%f", &b);
+        b=validasiBil();
         
-        printf("Masukkan Panjang Sisi 3 : ");
+        printf("\nMasukkan Panjang Sisi 3 : ");
         
-        scanf("%f", &c);
+        c=validasiBil();
 
         luas = a+b+c*0.5;
 
@@ -73,43 +114,43 @@ int main()
 
     case 2:
 
-        printf("Masukkan Diagonal 1 : ");
+        printf("\nMasukkan Diagonal 1 : ");
 
-        scanf("%f", &d1);
+        d1=validasiBil();
 
-        printf("Masukkan Diagonal 2 : ");
+        printf("\nMasukkan Diagonal 2 : ");
 
-        scanf("%f", &d2);
+        d2=validasiBil();
         
-        printf("Masukkan Sisi Belah Ketupat : ");
+        printf("\nMasukkan Sisi Belah Ketupat : ");
         
-        scanf("%f", &sisi);
-
+        sisi=validasiBil();
+        
         luas = d1*d2*0.5;
 
         keliling = 4*sisi;
 
         printf("\n");
 
-        printf("Luas Persegi Panjang adalah %f\n", luas);
+        printf("\nLuas Persegi Panjang adalah %f\n", luas);
 
-        printf("keliling Persegi Panjang adalah %f\n", keliling);
+        printf("\nkeliling Persegi Panjang adalah %f\n", keliling);
 
         break;
 
     case 3:
 
-        printf("Masukkan Alas : ");
+        printf("\nMasukkan Alas : ");
         
-        scanf("%f", &alas);
+        alas=validasiBil();
         
-        printf("Masukkan Tinggi : ");
+        printf("\nMasukkan Tinggi : ");
         
-        scanf("%f", &tinggi);
+        tinggi=validasiBil();
         
-        printf("Masukkan Sisi Miring : ");
+        printf("\nMasukkan Sisi Miring : ");
         
-        scanf("%f", &b);
+        b=validasiBil();
         
         luas = alas*tinggi;
         
@@ -125,33 +166,33 @@ int main()
         
     case 4:
     	
-    	printf("Masukkan Alas 1 : ");
+    	printf("\nMasukkan Alas 1 : ");
     	
-    	scanf("%f", &alas1);
+    	alas1=validasiBil();
     	
-    	printf("Masukkan Alas 2 : ");
+    	printf("\nMasukkan Alas 2 : ");
     	
-    	scanf("%f", &alas2);
+    	alas2=validasiBil();
     	
-    	printf("Masukkan Tinggi Trapesium :");
+    	printf("\nMasukkan Tinggi Trapesium :");
     	
-    	scanf("%f", &tinggi);
+    	tinggi=validasiBil();
     	
-    	printf("Masukkan Sisi 1 : ");
+    	printf("\nMasukkan Sisi 1 : ");
     	
-    	scanf("%f", &a);
+    	a=validasiBil();
     	
-    	printf("Masukkan Sisi 2 : ");
+    	printf("\nMasukkan Sisi 2 : ");
     	
-    	scanf("%f", &b);
+    	b=validasiBil();
     	
-    	printf("Masukkan Sisi 3 : ");
+    	printf("\nMasukkan Sisi 3 : ");
     	
-    	scanf("%f", &c);
+    	c=validasiBil();
     	
-    	printf ("Masukkan Sisi 4: ");
+    	printf ("\nMasukkan Sisi 4: ");
     	
-    	scanf("%F", &d);
+    	d=validasiBil();
     	
     	luas = 0.5*alas1+alas2*tinggi;
     	
@@ -167,9 +208,9 @@ int main()
     	
     case 5:
     	
-    	printf("Masukkan Jari-jari Lingkaran: ");
+    	printf("\nMasukkan Jari-jari Lingkaran: ");
 
-        scanf("%f", &r);
+        r=validasiBil();
 
         luas = 3.14 * r * r;
 
@@ -191,7 +232,7 @@ int main()
 
     printf("Pilihan Anda [1-2]? ");
 
-    scanf("%d", &pilihan);
+    pilihan=validasi();
 
     printf("\n");
 
