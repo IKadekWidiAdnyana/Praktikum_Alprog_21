@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//MODUL 2 NO 4 (Mutiara)
 
 int validinteger(int *var){
 	char buff[1024];
